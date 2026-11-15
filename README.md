@@ -36,3 +36,7 @@ Change into the bug-free-waddle directory and then initialise the submodules.
 ```
 aws cloudfront create-invalidation --distribution-id E123456 --paths "/*";
 ```
+
+## Bucket region
+
+Careful when setting the AWS_REGION - bucket is in eu-west2?
