@@ -17,3 +17,9 @@ variable "aws_region" {
   description = "AWS Region to create assets in"
   default     = "us-east-1"
 }
+
+variable "subject_claim_prefix" {
+  type        = string
+  description = "The github repository OIDC confguration Default Subject claim prefix (Settings->Actions->OIDC)."
+}
+

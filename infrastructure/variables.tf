@@ -13,9 +13,9 @@ variable "github_repository" {
 }
 
 variable "create_github_oidc" {
-  type = bool
+  type        = bool
   description = "Create Github OIDC"
-  default = false 
+  default     = false
 }
 
 
@@ -23,3 +23,8 @@ variable "create_github_oidc" {
 #  description = "Path to the content directory"
 #  default     = "/tng_nfs/HOMER/sites/ramblers/public/"
 #}
+
+variable "subject_claim_prefix" {
+  type        = string
+  description = "The github repository OIDC confguration Default Subject claim prefix (Settings->Actions->OIDC)."
+}

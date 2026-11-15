@@ -51,12 +51,12 @@ data "aws_iam_openid_connect_provider" "github" {
 module "github-oidc" {
   oidc_provider_arn    = length(data.aws_iam_openid_connect_provider.github.arn) >= 1 ? data.aws_iam_openid_connect_provider.github.arn : null
   source               = "terraform-module/github-oidc-provider/aws"
-  version              = "~> 1"
+  version              = "~> 2.3"
   role_name            = local.github_name
   create_oidc_provider = false
   create_oidc_role     = true
 
-  repositories              = [var.github_repository]
+  repositories              = [var.subject_claim_prefix]
   oidc_role_attach_policies = [aws_iam_policy.s3_write_access.arn, aws_iam_policy.cloudfront_invalidation.arn]
   #  oidc_role_attach_policies = ["arn:aws:iam::aws:policy/AmazonS3FullAccess"]
 }

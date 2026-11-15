@@ -9,8 +9,8 @@ resource "aws_route53_record" "root-a" {
   type    = "A"
 
   alias {
-    name                   = module.cdn.cloudfront_distribution_domain_name
-    zone_id                = module.cdn.cloudfront_distribution_hosted_zone_id
+    name    = module.cdn.cloudfront_distribution_domain_name
+    zone_id = module.cdn.cloudfront_distribution_hosted_zone_id
     #.www_s3_distribution.hosted_zone_id
     evaluate_target_health = false
   }
