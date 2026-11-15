@@ -36,5 +36,3 @@ Change into the bug-free-waddle directory and then initialise the submodules.
 ```
 aws cloudfront create-invalidation --distribution-id E123456 --paths "/*";
 ```
-
-
