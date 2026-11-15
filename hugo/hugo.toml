@@ -1,6 +1,6 @@
 baseURL = 'https://stanleypeck.uk'
 languageCode = 'en-us'
-title = 'Stanley Peck'
+title = 'Stanley Peck - a life in pictures'
 uglyURLs = true
 relativeURLs = true
 timeout = 180
